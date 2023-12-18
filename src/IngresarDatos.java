@@ -15,15 +15,17 @@ public class IngresarDatos {
         oCredito.setFechaExpiracion(4, 2027);
         oCredito.setSaldo(1000.0);
 
-        while (true) {
+        String opcion3;
+        int opcionSalida = 0;
+        do {
             System.out.println("\nOpciones disponibles para Tarjeta de Crédito:");
             System.out.println("a. Cambio de contraseña");
             System.out.println("b. Realizar un pago");
             System.out.println("c. Presentación de la tarjeta");
-            System.out.println("d. Salir");
+            System.out.println("d. Regresar al menú principal");
             System.out.print("Seleccione una opción:");
-            String opcion = sc.nextLine();
-            switch (opcion.toLowerCase()) {
+            opcion3 = sc.nextLine();
+            switch (opcion3.toLowerCase()) {
                 case "a":
                     oCredito.cambiarClave("1234ab", "312abb", "312abb");
                     break;
@@ -34,19 +36,20 @@ public class IngresarDatos {
                     oCredito.presentarCredenciales();
                     break;
                 case "d":
-                    System.out.println("¡Hasta luego!");
-                    System.exit(0);
+                    System.out.println("Regresando menú principal...");
+                    opcionSalida = 1;
                     break;
                 default:
                     System.out.println("Opción no válida. Inténtelo de nuevo.");
+                    break;
             }
-        }
+        } while (opcionSalida != 1);
     }
 
     public void DatosEfectivo() {
         MetodoPago metodoPago = new MetodoPago();
-        metodoPago.setSaldo(900);
-        metodoPago.setPagoEfectivo(100.00);
+        metodoPago.setPagoEfectivo(1000.00);
         metodoPago.actualizarSaldo();
+        metodoPago.realizarPagoEfectivo(100);
     }
 }
