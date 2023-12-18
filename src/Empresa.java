@@ -15,6 +15,8 @@ public class Empresa {
     // Con que vas a pagar?
 
     Scanner scanner = new Scanner(System.in);
+    PersonaJuridica personaJuridica = new PersonaJuridica();
+    PersonaNatural personaNatural = new PersonaNatural();
 
     private String nombreEmpresa = "Supermaxi Quito";
     private String DireccionEmpresa = "Madrid y Av. 12 de Octubre";
@@ -76,28 +78,34 @@ public class Empresa {
 
     }
 
-    /*public void identificacion(){
-        int condition2 = 0;
-        scanner.nextLine();
-        do {
-           
-            System.out.println("Ingrese el numero de cedula o RUC");
-            String identificacion = scanner.nextLine();
-            if (identificacion.matches("[0-9]+") && identificacion.length() == 10){
-                String cedula = identificacion;
+
+    
+    public void identificacionCedula(){
+
+        String ruc = personaNatural.getcedula();
+          
+            if (ruc.matches("[0-9]+") && ruc.length() == 10){
                 System.out.println("Cedula guardada correctamente");
-                condition2 = 1;
-            } else if (identificacion.matches("[0-9]+") && identificacion.length() == 13) {
-                String RUC = identificacion;
-                System.out.println("RUC guardado correctamente");
-                condition2 = 1;
-            }
+            } 
             else{
                 System.out.println("Ingrese un dato valido");
-                condition2 = 0;
             }
-        } while (condition2 != 1);
-    }*/
+
+    }
+
+      
+    public void identificacionRuc(){
+
+        String id = personaJuridica.getRUC();
+    
+            if (id.matches("[0-9]+") && id.length() == 13){
+                System.out.println("RUC guardado correctamente");
+            } 
+            else{
+                System.out.println("Ingrese un dato valido");
+            }
+ 
+    }
 
     public void Pago(){
 

@@ -8,5 +8,9 @@ public class App {
         oempresa.cajero();
         
         oempresa.Pago();
+
+        oempresa.identificacionCedula();
+
+        oempresa.identificacionRuc();
     }
 }
