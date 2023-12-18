@@ -16,11 +16,11 @@ public class Empresa {
     private String DireccionEmpresa = "Madrid y Av. 12 de Octubre";
     private String RucEmpresa = "1790016919001";
 
-    public String getnombreEmpresa(){
+    public String getnombreEmpresa() {
         return this.nombreEmpresa;
     }
 
-    public String getDireccionEmpresa(){
+    public String getDireccionEmpresa() {
         return this.DireccionEmpresa;
     }
 
@@ -28,7 +28,7 @@ public class Empresa {
         return RucEmpresa;
     }
 
-    //Datos Empleados
+    // Datos Empleados
 
     public String Nombre1 = "Eduard Cachicuango";
     public String Cedula1 = "1717879012";
