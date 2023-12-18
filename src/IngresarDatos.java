@@ -42,4 +42,11 @@ public class IngresarDatos {
             }
         }
     }
+
+    public void DatosEfectivo() {
+        MetodoPago metodoPago = new MetodoPago();
+        metodoPago.setSaldo(900);
+        metodoPago.setPagoEfectivo(100.00);
+        metodoPago.actualizarSaldo();
+    }
 }
