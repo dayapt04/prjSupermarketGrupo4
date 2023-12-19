@@ -54,7 +54,7 @@ public class App {
                     System.out.print("Ingresar opcion: ");
                     int opcion2 = sc.nextInt();
 
-                    IngresarDatos oDatos = new IngresarDatos();
+                    MetodoPago oDatos = new MetodoPago();
 
                     do {
                         switch (opcion2) {
